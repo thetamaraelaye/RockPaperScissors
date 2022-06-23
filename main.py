@@ -1,53 +1,60 @@
-print ("Welcome to the Rock, Paper and Scissors. Let's Begin")
-print ("Basic Rules: Type R for Rock, S for Scissors and P for Paper")
+import random
 
-import random 
 
 while True:
-  choices = ["R", "P", "S"]
-  
-  computer = random.choices(choices)
-  player = none
-  
-  
-  while player not in choices:
-   print("Error! Wrong Choice. Try Again")
-   player = input("R, P or S?:").lower()
+    print ("Welcome to the Game of Rock, Paper and Scissors. Select R for Rock, S for Scissors and P for Paper")
+    choices = ["R", "P","S"]
 
-  if player == computer
-   print("computer {} : Player {}")
-   print("TIE")
-  
-  elif player == "R"
-   if computer == "P"
-    print("computer {} : Player {}",computer,player)
-    print("Computer Wins")
-   if computer == "P"
-    print("computer {} : Player {}",computer,player)
-    print("Player Wins. Well Done.")
+    computer = random.choice(choices)
+    player = None
 
-  elif player == "S"
-   if computer == "R"
-    print("computer {} : Player {}",computer,player)
-    print("Computer Wins.")
-   if computer == "P"
-    print("computer {} : Player {}",computer,player)
-    print("Player Wins. Well Done.")
-   
-   elif player == "P"
-   if computer == "S"
-    print("computer {} : Player {}",computer,player)
-    print("Computer Wins")
-   if computer == "R"
-    print("computer {} : Player {}",computer,player)
-    print("Player Wins. Well Done.")
-   
-   play_again = input("Play Again? Yes/No):").lower()
+    while player not in choices:
+        print("Pick either R, P or S")
+        player = input ("R, P, S?: ").upper()
 
-   if play_again!="yes"
-    break
+    if player == computer:
+        print("computer: ", computer)
+        print("computer: ", player)
+        print("Its a tie. No one wins")
+        pass
 
-print("Bye!")
+    elif player == "R":
+        if computer == "P":
+            print("computer: ", computer)
+            print("computer: ", player)
+            print("Player Loses")
+        if computer == "S":
+            print("computer: ", computer)
+            print("computer: ", player)
+            print("Player Wins")
+
+    elif player == "S":
+        if computer == "R":
+            print("computer: ", computer)
+            print("computer: ", player)
+            print("Player Loses")
+        if computer == "P":
+            print("computer: ", computer)
+            print("computer: ", player)
+            print("Player Wins")
+
+    elif player == "P":
+        if computer == "S":
+            print("computer: ", computer)
+            print("computer: ", player)
+            print("Player Loses")
+        if computer == "R":
+            print("computer: ", computer)
+            print("computer: ", player)
+            print("Player Wins")
+
+    play_again = input ("Play again? (Y/N): ").upper()
+
+    if play_again != "Y":
+        break
+
+print("Good Game")
+
 
   
    
